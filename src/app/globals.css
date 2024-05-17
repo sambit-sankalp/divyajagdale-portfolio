@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+.cardZoomEffect {
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+}
+
+.card:hover .overlay {
+  @apply opacity-100;
+}
+
+.card:hover .info {
+  @apply opacity-100 translate-y-0;
+}
