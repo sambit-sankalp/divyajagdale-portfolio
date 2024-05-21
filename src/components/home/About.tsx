@@ -45,7 +45,7 @@ const About = (props: Props) => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black w-full flex justify-center items-center pt-20">
+    <div className="min-h-screen bg-black w-full flex justify-center items-center pt-10 md:pt-20">
       <div className="w-[75%] grid grid-cols-2 md:grid-cols-3">
         <div className="col-span-2 w-full h-full relative">
           <div className="flex flex-col md:flex-row justify-start items-start">
@@ -103,7 +103,7 @@ const About = (props: Props) => {
                   id === index
                     ? `bg-pink text-white`
                     : `bg-transparent text-pink`
-                } text-center px-2 md:px-4 py-1.5 md:py-2.5 mr-2 mt-2 text-xl uppercase border-2 border-[#6C6C73] ${
+                } text-center px-2 md:px-4 py-1.5 md:py-2.5 mr-2 mt-2 text-base md:text-xl uppercase border-2 border-[#6C6C73] ${
                   tag.style
                 }`}
               >

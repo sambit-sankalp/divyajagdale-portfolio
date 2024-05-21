@@ -25,7 +25,7 @@ const Socials = (props: Props) => {
             <div key={index}>
               <FontAwesomeIcon
                 icon={icon}
-                className="w-4 md:w-7 h-4 md:h-7 text-pink my-1 sm:my-1.5 md:my-3"
+                className="w-4 md:w-7 h-4 md:!h-7 text-pink my-1 sm:my-1.5 md:my-3"
               />
             </div>
           ))}

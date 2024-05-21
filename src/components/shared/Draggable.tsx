@@ -52,7 +52,7 @@ const Draggable = ({ innerRef, rootClass = '', children }: Props) => {
       onMouseDown={handleDragStart}
       onMouseUp={handleDragEnd}
       onMouseMove={handleDrag}
-      className={rootClass + 'flex overflow-x-hidden'}
+      className={rootClass + 'flex overflow-x-scroll sm:overflow-x-hidden'}
     >
       {children}
     </div>

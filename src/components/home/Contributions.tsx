@@ -4,14 +4,17 @@ import SubHeading from '../shared/SubHeading';
 import Heading from '../shared/Heading';
 import Draggable from '../shared/Draggable';
 import Image from 'next/image';
-import ScrollContainer, { useScrollContainer } from 'react-indiana-drag-scroll';
 
 type Props = {};
 
 const categoryData = [
   { name: 'Film', style: 'rounded-none' },
   { name: 'Theatre', style: 'rounded-[10px]' },
-  { name: 'Writing', style: 'rounded-tl-[20px] rounded-br-[20px]' },
+  {
+    name: 'Writing',
+    style:
+      'rounded-tl-[10px] sm:rounded-tl-[20px] rounded-br-[10px] sm:rounded-br-[20px]',
+  },
 ];
 
 const contributionsData = [
@@ -23,7 +26,8 @@ const contributionsData = [
     description:
       'Rajjo runs a gang that strives to uplift the downtrodden and combat injustice in the village. When a corrupt politician runs for the local elections, Rajjo decides to compete against her.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[360px] h-[456px] rounded-tl-[60px]',
+    style:
+      'w-[180px] h-auto sm:w-[360px] sm:h-[456px] rounded-tl-[30px] sm:rounded-tl-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image2.svg',
@@ -33,7 +37,8 @@ const contributionsData = [
     description:
       'A conservative Mumbai suburb is bestirred by the arrival of an alluring cosmopolitan woman in their midst.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[456px] h-[280px] rounded-tr-[60px]',
+    style:
+      'w-[228px] sm:w-[456px] h-auto sm:h-[280px] rounded-tr-[30px] sm:rounded-tr-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image3.svg',
@@ -43,7 +48,8 @@ const contributionsData = [
     description:
       "'Stanley Ka Dabba' is the newest contribution from the perceptive writer-director, Amole Gupte that throws light on the daily life of a school going child. The movie discloses how this is child-soldier, rises above his pungent actual life condition on the way setting a pattern for all whiners to learn from, even imitate.",
     tags: ['Movie', 'Acting'],
-    style: 'w-[456px] h-[640px] rounded-bl-[60px]',
+    style:
+      'w-[228px] sm:w-[456px] h-auto sm:h-[640px] rounded-bl-[30px] sm:rounded-bl-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image4.svg',
@@ -53,7 +59,8 @@ const contributionsData = [
     description:
       'It is the newest contribution from the perceptive writer-director, Amole Gupte that throws light on the daily life of a school going child.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[360px] h-[360px] rounded-tr-[60px]',
+    style:
+      'w-[180px] sm:w-[360px] h-auto sm:h-[360px] rounded-tr-[30px] sm:rounded-tr-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image5.svg',
@@ -63,7 +70,8 @@ const contributionsData = [
     description:
       'A conservative Mumbai suburb is bestirred by the arrival of an alluring cosmopolitan woman in their midst. When a wide-eyed 13-year-old boy pursues a friendship with her, he stumbles upon her secret past and is thrust headlong into adulthood.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[360px] h-[456px] rounded-bl-[60px]',
+    style:
+      'w-[180px] sm:w-[360px] h-auto sm:h-[456px] rounded-bl-[30px] sm:rounded-bl-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image6.svg',
@@ -73,7 +81,8 @@ const contributionsData = [
     description:
       "After Ramprasad's untimely demise, his family comes together under one roof for a period of thirteen days.",
     tags: ['Movie', 'Acting'],
-    style: 'w-[456px] h-[280px] rounded-tr-[60px]',
+    style:
+      'w-[228px] sm:w-[456px] h-auto sm:h-[280px] rounded-tr-[30px] sm:rounded-tr-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image7.svg',
@@ -83,7 +92,8 @@ const contributionsData = [
     description:
       'Rajjo runs a gang that strives to uplift the downtrodden and combat injustice in the village. When a corrupt politician runs for the local elections, Rajjo decides to compete against her.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[456px] h-[640px] rounded-tl-[60px]',
+    style:
+      'w-[228px] sm:w-[456px] h-auto sm:h-[640px] rounded-tl-[30px] sm:rounded-tl-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image8.svg',
@@ -93,7 +103,8 @@ const contributionsData = [
     description:
       'Rajjo runs a gang that strives to uplift the downtrodden and combat injustice in the village.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[360px] h-[360px] rounded-tr-[60px]',
+    style:
+      'w-[180px] sm:w-[360px] h-auto sm:h-[360px] rounded-tr-[30px] sm:rounded-tr-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image9.svg',
@@ -103,7 +114,8 @@ const contributionsData = [
     description:
       'Rajjo runs a gang that strives to uplift the downtrodden and combat injustice in the village. When a corrupt politician runs for the local elections, Rajjo decides to compete against her.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[360px] h-[456px] rounded-bl-[60px]',
+    style:
+      'w-[180px] sm:w-[360px] h-auto sm:h-[456px] rounded-bl-[30px] sm:rounded-bl-[60px]',
   },
   {
     imageURL: '/images/home/contributions/image10.svg',
@@ -113,7 +125,8 @@ const contributionsData = [
     description:
       'It is the newest contribution from the perceptive writer-director, Amole Gupte that throws light on the daily life of a school going child.',
     tags: ['Movie', 'Acting'],
-    style: 'w-[456px] h-[280px] rounded-tr-[60px]',
+    style:
+      'w-[228px] sm:w-[456px] h-auto sm:h-[280px] rounded-tr-[30px] sm:rounded-tr-[60px]',
   },
 ];
 
@@ -129,8 +142,8 @@ const Contributions = (props: Props) => {
   const journalRef = useRef(null);
 
   return (
-    <div className="relative w-full min-h-screen bg-black py-16">
-      <div className="absolute w-full top-40 z-10">
+    <div className="relative w-full min-h-[70vh] md:min-h-screen bg-black py-8 md:py-16 border-none">
+      <div className="absolute w-full top-20 md:top-40 z-10 flex flex-col justify-center items-start">
         <div className="relative w-[75%] flex flex-col justify-start items-start mx-auto">
           <SubHeading>My Works</SubHeading>
           <Heading>
@@ -138,7 +151,7 @@ const Contributions = (props: Props) => {
             <span className="font-licorice text-pink">C</span>ontri
             <span className="font-licorice text-pink">b</span>utions
           </Heading>
-          <div className="flex flex-col justify-center items-center absolute right-0 top-0">
+          <div className="hidden md:block flex flex-col justify-center items-center absolute right-0 top-0">
             <div className="grid grid-cols-3">
               {categoryData.map((category, id) => (
                 <div
@@ -146,7 +159,7 @@ const Contributions = (props: Props) => {
                   key={id}
                   className={`${
                     id === active ? `bg-pink` : `bg-transparent`
-                  } text-center px-4 py-2.5 text-white mr-2 mt-2 uppercase border-2 border-[#6C6C73] hover:cursor-pointer ${
+                  } text-center px-2 lg:px-4 py-1.5 lg:py-2.5 text-sm lg:text-xl text-white mr-2 mt-2 uppercase border-2 border-[#6C6C73] hover:cursor-pointer ${
                     category.style
                   }`}
                 >
@@ -156,11 +169,28 @@ const Contributions = (props: Props) => {
             </div>
           </div>
         </div>
+        <div className="md:hidden flex flex-col justify-center items-start w-[75%] mx-auto">
+          <div className="grid grid-cols-3">
+            {categoryData.map((category, id) => (
+              <div
+                onClick={() => setActive(id)}
+                key={id}
+                className={`${
+                  id === active ? `bg-pink` : `bg-transparent`
+                } text-center px-2 lg:px-4 py-1.5 lg:py-2.5 text-sm lg:text-xl text-white mr-2 mt-2 uppercase border-2 border-[#6C6C73] hover:cursor-pointer ${
+                  category.style
+                }`}
+              >
+                {category.name}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="w-full mt-80">
+      <div className="w-full mt-52 sm:mt-80">
         <Draggable innerRef={journalRef} rootClass={'drag'}>
           <div
-            className="flex flex-row overflow-x-hidden mx-auto h-full w-full justify-start items-end"
+            className="flex flex-row overflow-x-scroll sm:overflow-x-hidden mx-auto h-full w-full justify-start items-end"
             ref={journalRef}
           >
             {contributionsData.map((image, id) => (
@@ -174,7 +204,7 @@ const Contributions = (props: Props) => {
                   sethover(false);
                   setCurrentID(-1);
                 }}
-                className={`card relative mx-4 min-w-[360px] min-h-[200px] ${image.style} overflow-hidden flex justify-center items-end`}
+                className={`card relative mx-1 sm:mx-4 min-w-[180px] sm:min-w-[360px] min-h-[100px] sm:min-h-[200px] ${image.style} overflow-hidden flex justify-center items-end`}
               >
                 {/* {id} */}
                 <Image

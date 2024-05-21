@@ -43,3 +43,27 @@ body {
 .card:hover .info {
   @apply opacity-100 translate-y-0;
 }
+
+/* @keyframes bounce {
+  0% {
+    transform: translateX(60%);
+  }
+  50% {
+    transform: translateX(530px);
+  }
+  100% {
+    transform: translateX(544px);
+  }
+} */
+
+@keyframes bounce {
+  0% {
+    transform: translateX(var(--start-pos));
+  }
+  50% {
+    transform: translateX(var(--mid-pos));
+  }
+  100% {
+    transform: translateX(var(--end-pos));
+  }
+}
