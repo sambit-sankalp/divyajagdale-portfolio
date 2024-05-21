@@ -209,7 +209,7 @@ const Playtrix = (props: Props) => {
           >
             <FontAwesomeIcon
               icon={faArrowLeft}
-              className="text-white h-auto sm:!h-7 w-5 sm:w-7"
+              className="text-white h-auto sm:!h-7 w-5 sm:w-7 py-2"
             />
           </button>
           <button
@@ -221,7 +221,7 @@ const Playtrix = (props: Props) => {
           >
             <FontAwesomeIcon
               icon={faArrowRight}
-              className="text-white h-auto sm:!h-7 w-5 sm:w-7"
+              className="text-white h-auto sm:!h-7 w-5 sm:w-7 py-2"
             />
           </button>
         </div>
