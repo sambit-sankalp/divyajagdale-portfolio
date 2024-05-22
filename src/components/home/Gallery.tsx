@@ -51,19 +51,19 @@ const galleryData = [
         alt: 'Portrait 5',
         width: 420,
         height: 478,
-        style: 'h-auto w-[420px] rounded-br-[60px]',
+        style: 'h-auto w-[420px] rounded-br-[60px] mr-2 sm:mr-6',
       },
       {
         content:
           '“ It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. “',
-        style: 'w-[456px] h-full rounded-tl-[30px] sm:rounded-tl-[60px] mx-6',
+        style: 'w-[456px] h-full rounded-tl-[30px] sm:rounded-tl-[60px]',
       },
       {
         src: '/images/home/gallery/row33.svg',
         alt: 'Portrait 6',
         width: 456,
         height: 478,
-        style: 'w-[456px] h-auto rounded-br-[60px]',
+        style: 'w-[456px] h-auto rounded-br-[60px] ml-2 sm:ml-6',
       },
     ],
   },
