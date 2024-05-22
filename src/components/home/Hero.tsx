@@ -20,7 +20,7 @@ const Hero = (props: Props) => {
     'text-[60px] sm:text-[100px] md:text-[140px] lg:text-[180px] uppercase leading-[70px] sm:leading-[100px] md:leading-[150px] lg:leading-[200px]';
 
   return (
-    <div className="relative bg-hero-image bg-cover bg-center min-h-screen flex justify-center items-center shadow-hero-overlay -z-50">
+    <div className="relative bg-hero-image bg-cover bg-center min-h-screen flex justify-center items-center shadow-hero-overlay z-20">
       <div className="w-[70%] flex flex-col">
         <h1
           className={`font-forum ${textStyle} text-left ${
@@ -49,7 +49,6 @@ const Hero = (props: Props) => {
           le
         </h1>
       </div>
-      
     </div>
   );
 };

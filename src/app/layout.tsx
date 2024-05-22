@@ -32,6 +32,33 @@ const chillax = localFont({
   variable: '--font-chillax',
 });
 
+const suisseintl = localFont({
+  src: [
+    {
+      path: '../fonts/suisseintl/SuisseIntl-Light.otf',
+      weight: '300',
+    },
+    {
+      path: '../fonts/suisseintl/SuisseIntl-Regular.otf',
+      weight: '400',
+    },
+    {
+      path: '../fonts/suisseintl/SuisseIntl-Medium.otf',
+      weight: '500',
+    },
+    {
+      path: '../fonts/suisseintl/SuisseIntl-SemiBold.otf',
+      weight: '600',
+    },
+    {
+      path: '../fonts/suisseintl/SuisseIntl-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-suisseintl',
+});
+
 const forum = Forum({
   subsets: ['latin'],
   weight: ['400'],
@@ -69,7 +96,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${chillax.variable} ${forum.variable} ${licorice.variable} ${poppins.variable} font-sans`}
+        className={`${chillax.variable} ${forum.variable} ${licorice.variable} ${poppins.variable} ${suisseintl.variable} font-sans`}
       >
         {children}
       </body>

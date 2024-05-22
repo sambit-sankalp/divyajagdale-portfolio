@@ -11,7 +11,7 @@ import Socials from '@/components/marginals/Socials';
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative bg-black">
       <Navbar />
       <Hero />
       <About />
