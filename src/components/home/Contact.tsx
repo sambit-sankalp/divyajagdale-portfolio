@@ -75,7 +75,7 @@ const Contact = (props: Props) => {
           className="transition-all duration-1000 ease-out w-[70%] sm:w-1/2 mx-auto flex justify-center items-center bg-[#6C6C73] hover:bg-pink rounded-[60px]"
         >
           <p
-            className={`transition-all duration-1000 ease-out translate-x-0 ${
+            className={`transition-all duration-1000 ease-out translate-x-0 font-medium ${
               hover && '-translate-x-2'
             } font-chillax text-lg sm:text-2xl py-1 sm:py-3 text-white uppercase`}
           >

@@ -7,7 +7,9 @@ type Props = {
 
 const Paragraph = ({ children, className }: Props) => {
   return (
-    <p className="text-[14px] md:text-[20px] font-chillax text-[#3C3C3C]">
+    <p
+      className={`text-[14px] md:text-[20px] font-chillax text-[#3C3C3C] ${className}`}
+    >
       {children}
     </p>
   );

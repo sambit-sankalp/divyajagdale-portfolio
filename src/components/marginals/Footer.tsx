@@ -7,7 +7,7 @@ const Footer = (props: Props) => {
 
   return (
     <footer className="w-full flex flex-col justify-center items-center">
-      <h1 className="text-[#D0D0DB] text-base sm:text-xl font-chillax">
+      <h1 className="text-[#D0D0DB] text-base sm:text-xl font-chillax font-medium">
         @ {currentYear} | <span className="text-pink">Divya Jadgale</span>
       </h1>
       <div className="h-3 bg-pink w-full mt-3 sm:mt-6"></div>
