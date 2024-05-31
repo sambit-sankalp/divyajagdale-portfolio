@@ -6,6 +6,7 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -15,9 +16,11 @@ const Socials = (props: Props) => {
   return (
     <>
       <div className="fixed z-50 left-0 bottom-0 px-3 sm:px-6 py-2 sm:py-4 rounded-tr-[20px] backdrop-filter backdrop-blur-[150px]">
-        <h5 className="font-chillax text-sm sm:text-base md:text-[20px] text-white">
-          Volunteer Happy Foundation
-        </h5>
+        <Link href="/happyfoundation">
+          <h5 className="font-chillax text-sm sm:text-base md:text-[20px] text-white">
+            Volunteer Happy Foundation
+          </h5>
+        </Link>
       </div>
       <div className="fixed z-50 right-0 bottom-0 py-3 sm:py-6 px-2 sm:px-4 rounded-tl-[20px] backdrop-filter backdrop-blur-[100px]">
         <div className="flex flex-col justify-center items-center">

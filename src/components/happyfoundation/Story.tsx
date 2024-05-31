@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Heading from '../shared/happyfoundation/Heading';
 import Image from 'next/image';
 import Paragraph from '../shared/happyfoundation/Paragraph';
@@ -13,6 +14,7 @@ const storyData = [
 ];
 
 const Story = (props: Props) => {
+  const [hover, sethover] = useState(false);
   const paraStyle = 'my-2';
 
   return (
@@ -71,11 +73,13 @@ const Story = (props: Props) => {
         </div>
       </div>
       <Image
-        src="/images/happyfoundation/photo.svg"
+        src={'/images/happyfoundation/familyColor.svg'}
         alt="photo"
         width={1124}
         height={650}
-        className="w-full h-auto mt-6"
+        className="w-full h-auto mt-6 saturate-0 contrast-100 opacity-50 hover:filter-none hover:opacity-100 transition-all duration-500 ease-in-out"
+        // onMouseEnter={() => sethover(true)}
+        // onMouseLeave={() => sethover(false)}
       />
     </div>
   );

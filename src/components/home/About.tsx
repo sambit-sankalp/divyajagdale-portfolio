@@ -85,13 +85,13 @@ const About = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="col-span-2 mt-2 md:mt-0 md:col-span-1">
+        <div className="col-span-2 mt-2 md:mt-0 md:col-span-1 rounded-tl-[60px] rounded-bl-[60px] overflow-hidden">
           <Image
             src="/images/home/djimage.svg"
             width={456}
             height={740}
             alt="dj"
-            className="w-full h-auto"
+            className="w-full h-auto grayscale rounded-tl-[60px] rounded-bl-[60px] hover:grayscale-0 hover:scale-110 transition-all duration-1000 ease-in-out"
           />
         </div>
         <div className="w-full block md:hidden flex flex-col justify-center items-center col-span-2">
@@ -103,7 +103,11 @@ const About = (props: Props) => {
                   id === index
                     ? `bg-pink text-white`
                     : `bg-transparent text-pink`
-                } text-center px-2 md:px-4 py-1.5 md:py-2.5 mr-2 mt-2 text-base md:text-xl uppercase border-2 border-[#6C6C73] ${
+                } text-center font-chillax px-2 md:px-4 py-1.5 md:py-2.5 mt-2 ${
+                  index === 2 ? 'mr-0' : 'mr-2'
+                } ${
+                  index === 5 ? 'mr-0' : 'mr-2'
+                } text-base md:text-xl font-medium uppercase border-2 border-[#6C6C73] ${
                   tag.style
                 }`}
               >

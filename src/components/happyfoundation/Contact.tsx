@@ -97,7 +97,7 @@ const Contact = (props: Props) => {
       </div>
       <button className="w-[70%] mt-8 md:mt-16 sm:w-1/2 mx-auto flex justify-center items-center font-medium bg-[#1E1E1E] hover:bg-black rounded-[60px]">
         <p
-          className={`font-chillax text-lg sm:text-2xl py-1 sm:py-3 text-white`}
+          className={`font-chillax font-medium text-lg sm:text-2xl py-1 sm:py-3 text-white`}
         >
           Submit
         </p>

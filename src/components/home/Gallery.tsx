@@ -13,6 +13,7 @@ const galleryData = [
         alt: 'Portrait 1',
         width: 420,
         height: 478,
+        containerStyle: 'w-[420px] h-auto',
         style: 'h-auto w-[420px] rounded-br-[60px]',
       },
       {
@@ -20,7 +21,8 @@ const galleryData = [
         alt: 'Portrait 2',
         width: 648,
         height: 478,
-        style: 'w-[648px] h-auto rounded-tl-[60px] ml-2 sm:ml-6',
+        containerStyle: 'w-[648px] h-auto ml-2 sm:ml-6',
+        style: 'w-[648px] h-auto rounded-tl-[60px]',
       },
     ],
   },
@@ -32,13 +34,15 @@ const galleryData = [
         alt: 'Portrait 3',
         width: 840,
         height: 478,
-        style: 'h-auto w-[840px] rounded-bl-[60px] mr-2 sm:mr-6',
+        containerStyle: 'w-[840px] h-auto mr-2 sm:mr-6',
+        style: 'h-auto w-[840px] rounded-bl-[60px]',
       },
       {
         src: '/images/home/gallery/row22.svg',
         alt: 'Portrait 4',
         width: 420,
         height: 478,
+        containerStyle: 'w-[420px] h-auto',
         style: 'w-[420px] h-auto rounded-tl-[60px]',
       },
     ],
@@ -51,7 +55,8 @@ const galleryData = [
         alt: 'Portrait 5',
         width: 420,
         height: 478,
-        style: 'h-auto w-[420px] rounded-br-[60px] mr-2 sm:mr-6',
+        containerStyle: 'w-[420px] h-auto mr-2 sm:mr-6',
+        style: 'h-auto w-[420px] rounded-br-[60px]',
       },
       {
         content:
@@ -63,7 +68,8 @@ const galleryData = [
         alt: 'Portrait 6',
         width: 456,
         height: 478,
-        style: 'w-[456px] h-auto rounded-br-[60px] ml-2 sm:ml-6',
+        containerStyle: 'w-[456px] h-auto ml-2 sm:ml-6',
+        style: 'w-[456px] h-auto rounded-br-[60px]',
       },
     ],
   },
@@ -72,7 +78,7 @@ const galleryData = [
 const Gallery = (props: Props) => {
   return (
     <div className="min-h-screen bg-black pt-10">
-      <div className="w-[75%] flex flex-col justify-start items-start mx-auto pb-4 sm:pb-10">
+      <div className="w-[75%] flex flex-col justify-start items-start mx-auto pb-4 sm:pb-10 pt-12 sm:pt-24">
         <SubHeading>My Portraits</SubHeading>
         <Heading>
           <span className="font-licorice text-pink">G</span>allery
@@ -93,20 +99,24 @@ const Gallery = (props: Props) => {
                   data.content
                     ? 'hidden sm:block w-[456px] h-[478px]'
                     : row.width
-                } flex justify-center items-center`}
+                } flex justify-center items-center overflow-hidden`}
               >
                 {data.src && (
-                  <Image
-                    src={data.src}
-                    width={data.width}
-                    height={data.height}
-                    alt={data.alt}
-                    className={`${data.style}`}
-                  />
+                  <div
+                    className={`${data.containerStyle} overflow-hidden rounded-none`}
+                  >
+                    <Image
+                      src={data.src}
+                      width={data.width}
+                      height={data.height}
+                      alt={data.alt}
+                      className={`${data.style} grayscale hover:grayscale-0 scale-100 hover:scale-110 transition-all ease-in-out duration-500`}
+                    />
+                  </div>
                 )}
                 {data.content && (
                   <div
-                    className={`flex w-full h-full bg-pink text-white font-chillax justify-center items-center p-1 sm:p-4 text-center ${data.style}`}
+                    className={`flex w-full h-full bg-pink text-white font-chillax font-medium justify-center items-center p-1 sm:p-4 text-center ${data.style}`}
                   >
                     <p className="text-sm sm:text-lg lg:text-xl font-chillax w-[65%]">
                       {data.content}

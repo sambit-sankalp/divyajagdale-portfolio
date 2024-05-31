@@ -2,6 +2,7 @@
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 type Props = {};
@@ -19,9 +20,11 @@ const Navbar = (props: Props) => {
             height={40}
             className="w-[180px] lg:w-[260px] h-[40px] cursor-pointer"
           />
-          <p className="text-black font-licorice text-[25px] lg:text-[32px] mx-6">
-            Divya Jagdale
-          </p>
+          <Link href="/">
+            <p className="text-black font-licorice text-[25px] lg:text-[32px] mx-6">
+              Divya Jagdale
+            </p>
+          </Link>
           <button className="bg-black font-chillax px-6 py-2.5 text-[16px] rounded-[60px] text-white font-medium">
             Let’s Help Together
           </button>

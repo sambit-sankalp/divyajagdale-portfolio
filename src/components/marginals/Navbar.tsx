@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { faBars, faTimes, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -41,20 +42,22 @@ const Navbar = (props: Props) => {
           {navbarItems.slice(0, 3).map((item) => (
             <h5
               key={item.link}
-              className="font-chillax text-[#D0D0DB] uppercase mx-4 text-base hover:text-white cursor-pointer"
+              className="font-chillax font-medium text-[#D0D0DB] uppercase mx-4 text-base hover:text-white cursor-pointer"
             >
               {item.name}
             </h5>
           ))}
         </div>
-        <p className="text-pink font-licorice text-[32px] mx-6">
-          Divya Jagdale
-        </p>
+        <Link href="/">
+          <p className="text-pink font-licorice text-[32px] mx-6">
+            Divya Jagdale
+          </p>
+        </Link>
         <div className="flex items-center justify-center">
           {navbarItems.slice(3, 6).map((item) => (
             <h5
               key={item.link}
-              className="font-chillax text-[#D0D0DB] uppercase mx-4 text-base hover:text-white cursor-pointer"
+              className="font-chillax font-medium text-[#D0D0DB] uppercase mx-4 text-base hover:text-white cursor-pointer"
             >
               {item.name}
             </h5>
@@ -88,7 +91,7 @@ const Navbar = (props: Props) => {
           {navbarItems.map((item) => (
             <h5
               key={item.link}
-              className="font-chillax text-[#D0D0DB] uppercase text-base hover:text-white cursor-pointer my-2"
+              className="font-chillax font-medium text-[#D0D0DB] uppercase text-base hover:text-white cursor-pointer my-2"
             >
               {item.name}
             </h5>
