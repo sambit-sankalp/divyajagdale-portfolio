@@ -20,7 +20,7 @@ const chillax = localFont({
       weight: '500',
     },
     {
-      path: '../fonts/chillax/Chillax-SemiBold.otf',
+      path: '../fonts/chillax/Chillax-Semibold.otf',
       weight: '600',
     },
     {
