@@ -75,8 +75,8 @@ const Contact = (props: Props) => {
           className="transition-all duration-1000 ease-out w-[70%] sm:w-1/2 mx-auto flex justify-center items-center bg-[#6C6C73] hover:bg-pink rounded-[60px]"
         >
           <p
-            className={`transition-all duration-1000 ease-out translate-x-0 font-medium ${
-              hover && '-translate-x-3'
+            className={`transition-all duration-1000 ease-out font-medium ${
+              hover ? '-translate-x-2.5' : 'translate-x-0'
             } font-chillax text-lg sm:text-2xl py-1 sm:py-3 text-white uppercase`}
           >
             SEND
@@ -86,7 +86,7 @@ const Contact = (props: Props) => {
             width={20}
             height={20}
             className={`w-5 h-5 ml-1 mb-1 opacity-0 transition-all duration-1000 ease-out ${
-              hover && 'opacity-100 -translate-x-1.5'
+              hover ? 'opacity-100 -translate-x-1.5' : 'opacity-0'
             }`}
             alt="send"
           />

@@ -28,6 +28,7 @@ const config: Config = {
         pink: '#FAA4A4',
         bodybg: 'rgba(250, 164, 164, 0.2)',
         navbg: 'rgba(250, 164, 164, 0.1)',
+        disabledGrey: '#D0D0DB',
       },
       boxShadow: {
         'hero-overlay': 'inset 0 0 0 2000px rgba(0, 0, 0, 0.4)',

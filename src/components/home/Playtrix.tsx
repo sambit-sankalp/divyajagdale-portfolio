@@ -145,7 +145,7 @@ const Playtrix = (props: Props) => {
   // console.log('startPos', startPos);
   // console.log('iniPos', iniPos);
 
-  console.log('disbale', rightButtonDisable);
+  // console.log('disbale', rightButtonDisable);
 
   return (
     <div className="min-h-[80vh] sm:min-h-[120vh] w-full h-full bg-black relative flex justify-end items-center border-none">
@@ -234,7 +234,7 @@ const Playtrix = (props: Props) => {
             onClick={handleLeftClick}
             disabled={index === -1}
             className={`w-[30px] h-auto sm:w-[72px] sm:h-[72px] flex justify-center items-center rounded-tl-[10px] sm:rounded-tl-[20px] ${
-              index === -1 ? 'bg-[#D0D0DB]' : 'bg-pink'
+              index === -1 ? 'bg-disabledGrey' : 'bg-pink'
             }`}
           >
             <FontAwesomeIcon
@@ -245,8 +245,8 @@ const Playtrix = (props: Props) => {
           <button
             onClick={handleRightClick}
             disabled={index === (isMobileScreen() ? 4 : 3)}
-            className={`w-[30px] h-auto sm:w-[72px] sm:h-[72px] bg-pink ml-2 flex justify-center items-center rounded-br-[10px] sm:rounded-br-[20px] ${
-              rightButtonDisable ? 'bg-[#d0d0db]' : 'bg-pink'
+            className={`w-[30px] h-auto sm:w-[72px] sm:h-[72px] ml-2 flex justify-center items-center rounded-br-[10px] sm:rounded-br-[20px] ${
+              rightButtonDisable ? 'bg-disabledGrey' : 'bg-pink'
             }`}
           >
             <FontAwesomeIcon
