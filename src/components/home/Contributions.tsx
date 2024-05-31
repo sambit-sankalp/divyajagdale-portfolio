@@ -237,7 +237,6 @@ const theatreData = [
   },
 ];
 
-
 const removePx = (value: string): number => {
   return parseInt(value.replace('px', ''), 10);
 };
@@ -315,7 +314,7 @@ const Contributions = (props: Props) => {
           >
             {contributionData.map((image, id) => (
               <div
-                key={id}
+                key={`${id}-${active}-${image.imageURL}`}
                 onMouseEnter={() => {
                   sethover(true);
                   setCurrentID(id);
