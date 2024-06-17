@@ -45,7 +45,10 @@ const About = (props: Props) => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black w-full flex justify-center items-center pt-10 md:pt-20">
+    <div
+      id="about"
+      className="min-h-screen bg-black w-full flex justify-center items-center pt-10 md:pt-20"
+    >
       <div className="w-[75%] grid grid-cols-2 md:grid-cols-3">
         <div className="col-span-2 w-full h-full relative">
           <div className="flex flex-col md:flex-row justify-start items-start">

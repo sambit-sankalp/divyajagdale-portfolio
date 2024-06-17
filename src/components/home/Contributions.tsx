@@ -261,7 +261,10 @@ const Contributions = (props: Props) => {
   }, [active]);
 
   return (
-    <div className="relative w-full min-h-[70vh] md:min-h-screen bg-black py-8 md:py-16 border-none">
+    <div
+      id="work"
+      className="relative w-full min-h-[70vh] md:min-h-screen bg-black py-8 md:py-16 border-none"
+    >
       <div className="absolute w-full top-20 md:top-40 z-10 flex flex-col justify-center items-start">
         <div className="relative w-[75%] flex flex-col justify-start items-start mx-auto">
           <SubHeading>My Works</SubHeading>

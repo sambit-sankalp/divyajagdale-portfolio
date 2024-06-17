@@ -77,7 +77,7 @@ const galleryData = [
 
 const Gallery = (props: Props) => {
   return (
-    <div className="min-h-screen bg-black pt-10">
+    <div id="gallery" className="min-h-screen bg-black pt-10">
       <div className="w-[75%] flex flex-col justify-start items-start mx-auto pb-4 sm:pb-10 pt-12 sm:pt-24">
         <SubHeading>My Portraits</SubHeading>
         <Heading>

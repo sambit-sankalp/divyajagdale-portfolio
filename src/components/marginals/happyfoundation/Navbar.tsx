@@ -9,6 +9,18 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const [isOpen, setisOpen] = useState(false);
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest',
+    });
+  };
   return (
     <div className="w-full h-20 shadow-nav-shadow fixed top-0  bg-white bg-opacity-70 backdrop-filter backdrop-blur-[6px] z-30 flex justify-center items-center">
       <div className="w-full h-full bg-bodybg flex justify-center items-center">
@@ -25,7 +37,10 @@ const Navbar = (props: Props) => {
               Divya Jagdale
             </p>
           </Link>
-          <button className="bg-black font-chillax px-6 py-2.5 text-[16px] rounded-[60px] text-white font-medium">
+          <button
+            onClick={(e) => handleNavClick(e, 'help')}
+            className="bg-black font-chillax px-6 py-2.5 text-[16px] rounded-[60px] text-white font-medium"
+          >
             Let’s Help Together
           </button>
         </div>
@@ -60,7 +75,10 @@ const Navbar = (props: Props) => {
             <p className="text-black font-licorice text-[25px] lg:text-[32px] mx-6">
               Divya Jagdale
             </p>
-            <button className="bg-black font-chillax px-6 py-2.5 text-[16px] rounded-[60px] text-white font-medium">
+            <button
+              onClick={(e) => handleNavClick(e, 'help')}
+              className="bg-black font-chillax px-6 py-2.5 text-[16px] rounded-[60px] text-white font-medium"
+            >
               Let’s Help Together
             </button>
           </div>

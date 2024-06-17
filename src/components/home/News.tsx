@@ -67,7 +67,10 @@ const News = (props: Props) => {
   const [currentID, setCurrentID] = useState(-1);
 
   return (
-    <div className="min-h-[60vh] sm:min-h-screen bg-black pb-10 sm:py-28">
+    <div
+      id="news"
+      className="min-h-[60vh] sm:min-h-screen bg-black pb-10 sm:py-28"
+    >
       <div className="w-[75%] flex flex-col justify-start items-start mx-auto">
         <SubHeading>IN THE SPOTLIGHT</SubHeading>
         <Heading>

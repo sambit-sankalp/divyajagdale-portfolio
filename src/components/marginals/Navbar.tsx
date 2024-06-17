@@ -9,32 +9,46 @@ type Props = {};
 const navbarItems = [
   {
     name: 'Home',
-    link: '/',
+    link: 'home',
   },
   {
     name: 'About',
-    link: '/about',
+    link: 'about',
   },
   {
     name: 'Work',
-    link: '/work',
+    link: 'work',
   },
   {
     name: 'Gallery',
-    link: '/gallery',
+    link: 'gallery',
   },
   {
     name: 'News',
-    link: '/news',
+    link: 'news',
   },
   {
     name: 'Contact',
-    link: '/contact',
+    link: 'contact',
   },
 ];
 
 const Navbar = (props: Props) => {
   const [isOpen, setisOpen] = useState(false);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLHeadingElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  };
+
   return (
     <div className="w-full h-20 border-b border-pink fixed top-0 bg-transparent backdrop-filter backdrop-blur-[6px] z-30 flex justify-center items-center">
       <div className="hidden md:flex justify-center items-center">
@@ -42,6 +56,7 @@ const Navbar = (props: Props) => {
           {navbarItems.slice(0, 3).map((item) => (
             <h5
               key={item.link}
+              onClick={(e) => handleNavClick(e, item.link)}
               className="font-chillax font-medium text-[#D0D0DB] uppercase mx-4 text-base hover:text-white cursor-pointer"
             >
               {item.name}
@@ -57,6 +72,7 @@ const Navbar = (props: Props) => {
           {navbarItems.slice(3, 6).map((item) => (
             <h5
               key={item.link}
+              onClick={(e) => handleNavClick(e, item.link)}
               className="font-chillax font-medium text-[#D0D0DB] uppercase mx-4 text-base hover:text-white cursor-pointer"
             >
               {item.name}
@@ -91,6 +107,10 @@ const Navbar = (props: Props) => {
           {navbarItems.map((item) => (
             <h5
               key={item.link}
+              onClick={(e) => {
+                handleNavClick(e, item.link);
+                setisOpen(false);
+              }}
               className="font-chillax font-medium text-[#D0D0DB] uppercase text-base hover:text-white cursor-pointer my-2"
             >
               {item.name}

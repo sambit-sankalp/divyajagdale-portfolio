@@ -12,7 +12,10 @@ const Contact = (props: Props) => {
     'font-chillax absolute text-base sm:text-xl text-[#AAAAAA] duration-300 transform ml-3 sm:ml-6 translate-y-0 scale-75 top-3 -z-10 origin-[0] peer-focus:text-black peer-focus:opacity-0';
 
   return (
-    <div className="min-h-[80vh] md:min-h-screen w-[75%] mx-auto pt-16 md:pt-36">
+    <div
+      id="help"
+      className="min-h-[80vh] md:min-h-screen w-[75%] mx-auto pt-16 md:pt-36"
+    >
       <Heading className="w-1/2">
         Let’s{' '}
         <span className="inline-flex justify-center items-center h-fit mt-2">

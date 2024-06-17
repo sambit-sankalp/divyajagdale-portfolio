@@ -14,7 +14,7 @@ const Contact = (props: Props) => {
   const labelStyle =
     'font-chillax absolute text-base sm:text-xl text-[#6C6C73] duration-300 transform ml-3 sm:ml-6 translate-y-0 scale-75 top-3 -z-10 origin-[0] peer-focus:text-white peer-focus:opacity-0';
   return (
-    <div className="min-h-[70vh] sm:min-h-screen bg-black pt-5">
+    <div id="contact" className="min-h-[70vh] sm:min-h-screen bg-black pt-5">
       <div className="w-[75%] flex flex-col justify-start items-start mx-auto pb-4 sm:pb-10">
         <SubHeading>LET’S BUILD SOMETHING</SubHeading>
         <Heading>
