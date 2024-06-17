@@ -85,7 +85,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Divya Jagdale',
-  description: 'Portfolio of Divya Jagdale',
+  description:
+    'Hi there! This is my website. I work as an actor, screenwriter, and theatre personality. My focus is on promoting positive change and inspiring awakening in people.',
 };
 
 export default function RootLayout({
